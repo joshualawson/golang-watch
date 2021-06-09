@@ -1,7 +1,7 @@
 FROM golang:latest
 ENV CGO_ENABLED 0
 
-RUN apk update && apk add bash inotify-tools
+RUN apt-get update && apt-get install bash inotify-tools
 RUN go get github.com/go-delve/delve/cmd/dlv
 
 
