@@ -8,4 +8,6 @@ RUN go get github.com/go-delve/delve/cmd/dlv
 COPY ./entrypoint.sh /opt
 RUN chmod +x /opt/entrypoint.sh
 
+WORKDIR "/src"
+
 ENTRYPOINT [ "/opt/entrypoint.sh" ]
